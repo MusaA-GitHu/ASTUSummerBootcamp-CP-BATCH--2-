@@ -1,0 +1,19 @@
+#solved by ma
+
+
+class Solution(object):
+    def finalValueAfterOperations(self, operations):
+        """
+        :type operations: List[str]
+        :rtype: int
+        """
+        x_pbefore=operations.count('++X') #p-->pluse
+        x_pafter=operations.count('X++')
+        x_mbefore=operations.count('--X') #m-->minus
+        x_mafter=operations.count('X--')
+        totalpluse=x_pbefore+x_pafter
+        totalminus=x_mbefore+x_mafter
+        return totalpluse + (totalminus*(-1))
+
+
+        
