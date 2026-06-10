@@ -1,0 +1,14 @@
+#solved by ma
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:
+       
+        co=0
+    
+        for j in range(1,len(nums)):
+            if nums[j]!=nums[co]:
+                co+=1
+                nums[co]=nums[j]
+                    
+        return co+1
+                
+                
